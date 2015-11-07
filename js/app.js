@@ -58,6 +58,52 @@
 			url : "contact.html"
 		}
 		];
+	var photos = [
+		{
+			name:"nature1",
+			url:"images/nature1.jpg"
+
+		},
+		{
+			name:"nature2",
+			url:"images/nature2.jpg"
+
+		},
+		{
+			name:"nature3",
+			url:"images/nature3.jpg"
+
+		},
+		{
+			name:"nature4",
+			url:"images/nature4.jpg"
+
+		},
+		{
+			name:"nature5",
+			url:"images/nature5.jpg"
+
+		},
+		{
+			name:"nature6",
+			url:"images/nature6.jpg"
+
+		},	
+		{
+			name:"nature7",
+			url:"images/nature7.jpg"
+
+		}						
+	];
+	var contact ={
+
+	};
+	app.controller("ContactController",function(){
+		this.product = contact;
+	});
+	app.controller("PhotoController",function(){
+		this.product = photos;
+	});
 	app.controller("NavController",function(){
 		this.product = nav;
 	});

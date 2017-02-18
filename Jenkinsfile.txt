@@ -1,0 +1,17 @@
+app_repository = "rajatarun/mywebsite"
+
+scm {
+   
+	github(app_repository,'master','https','github.com',{
+
+	       it / userRemoteConfigs / 'hudson.plugin.git.UserRemoteConfig'
+    
+	}) 
+
+}
+
+triggers{
+
+    githubPush()
+
+}

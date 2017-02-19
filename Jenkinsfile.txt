@@ -3,7 +3,7 @@ node('master'){
 		checkout scm
 	}
 	stage('depoly to s3'){
-		sh('sudo zip build.zip *')
-		sh('sudo aws s3 cp s3://tarunblogwebsite --sse')
+		sh('zip build.zip *')
+		sh('aws s3 cp s3://tarunblogwebsite --sse')
 	}
 }

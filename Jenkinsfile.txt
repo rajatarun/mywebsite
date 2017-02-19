@@ -1,17 +1,9 @@
-app_repository = "rajatarun/mywebsite"
-
-scm {
-   
-	github(app_repository,'master','https','github.com',{
-
-	       it / userRemoteConfigs / 'hudson.plugin.git.UserRemoteConfig'
-    
-	}) 
-
-}
-
-triggers{
-
-    githubPush()
-
+node('master'){
+	stage('checkout'){
+		checkout scm
+	}
+	stage('depoly to s3'){
+		sh('sudo zip build.zip *')
+		sh('sudo aws s3 cp s3://tarunblogwebsite --sse')
+	}
 }
